@@ -11,4 +11,13 @@ returns {"A": 3, "C": 1, "G": 1, "T": 2}
 """
 
 def ntcount(dna):
-  pass  # delete this line when you start writing your code
+  for character in dna:
+    if character !="A" and character !="C" and character !="G" and character !="T":
+      return "error"
+  else: 
+    dnaseq={}
+    for letter in dna:
+      dnaseq.setdefault(letter,0)
+      dnaseq[letter]+=1
+    return dnaseq
+    print(ntcount(dna))
